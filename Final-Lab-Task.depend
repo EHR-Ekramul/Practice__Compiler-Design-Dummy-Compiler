@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1712119641 source:d:\study & work\courses\compiler design\final\final-lab-task\main.cpp
+	<bits/stdc++.h>
+	<fstream>
+
