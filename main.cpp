@@ -141,6 +141,7 @@ int main(){
 
 /*----------------------------------------------------------------------Print Symbol Table--------------------------------------------------------------------*/
 
+    cout<<"\n\n-------------------------Symbol Table-------------------------"<<endl;
     cout<<"\n\n  Keywords      ::   ";
     for(int i=0; i<keywords.size(); i++){
         cout<<keywords[i]<<"   ";
@@ -168,7 +169,6 @@ int main(){
 
     return 0;
 }
-
 bool checkChar(char ch){ //Check Character or not
     if((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')){
         return true;
