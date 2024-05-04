@@ -140,17 +140,31 @@ int main(){
     }
 
 /*----------------------------------------------------------------------Print Symbol Table--------------------------------------------------------------------*/
-    cout<< "\n\n------------------------------------------------Symbol Table------------------------------------------------"<<endl<<endl;
-    cout << left << setw(28) << "  Keywords" << setw(24) << "Identifiers" << setw(22) << "Operators" << setw(27) << "Punctuations" << "Constants" << endl<<endl;
 
-    for (size_t i = 0; i < max({keywords.size(), identifiers.size(), operators.size(), punctuations.size(), constants.size()}); ++i){
+    cout<<"\n\n  Keywords      ::   ";
+    for(int i=0; i<keywords.size(); i++){
+        cout<<keywords[i]<<"   ";
+    }cout<<endl;
 
-        cout << left << "  " <<setw(26) << (i < keywords.size() ? keywords[i] : "")
-             << setw(24) << (i < identifiers.size() ? identifiers[i] : "")
-             << setw(24)<< (i < operators.size() ? operators[i] : "")
-             << setw(26) << (i < punctuations.size() ? string(1, punctuations[i]) : "")
-             << (i < constants.size() ? constants[i] : "")<< endl;
-    }
+    cout<<"\n\n  Identifiers   ::   ";
+    for(int i=0; i<identifiers.size(); i++){
+        cout<<identifiers[i]<<"   ";
+    }cout<<endl;
+
+    cout<<"\n\n  Operators     ::   ";
+    for(int i=0; i<operators.size(); i++){
+        cout<<operators[i]<<"   ";
+    }cout<<endl;
+
+    cout<<"\n\n  Punctuations  ::   ";
+    for(int i=0; i<punctuations.size(); i++){
+        cout<<punctuations[i]<<"   ";
+    }cout<<endl;
+
+    cout<<"\n\n  Constants     ::   ";
+    for(int i=0; i<constants.size(); i++){
+        cout<<constants[i]<<"   ";
+    }cout<<endl<<endl<<endl;
 
     return 0;
 }
