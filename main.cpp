@@ -50,6 +50,7 @@ int main(){
                             element[i+1].pop_back();
                             element[i+1].pop_back();
                         }
+
                         auto isvalidvar = checkVariable(element[i+1]);
 
                         if(isvalidvar.first == true){
@@ -66,7 +67,6 @@ int main(){
                 }
                 if(checkKeyword(element[i])==true)    {break;}
                 if(varName[element[i]]>0==true)    {break;}
-
                 else if(!datatypeflag){
                     cout<<endl<<"\nElement    "<<element[i+1] <<"     not Declared in this Scope."<<endl<<endl;
                     return 0;
@@ -105,13 +105,13 @@ int main(){
                 ele.pop_back();
             }
 
-            if (checkOperatorDouble(ele)){
+            if (checkOperatorDouble(ele)==true){
                 operators.push_back(ele);
             }
-            else if (checkKeyword(ele)){
+            else if (checkKeyword(ele)==true){
                 keywords.push_back(ele);
             }
-            else if (checkChar(ele[0])){
+            else if (checkChar(ele[0])==true){
                 if(identiMap[ele]<1){
                     identifiers.push_back(ele);
                     identiMap[ele]++;
@@ -122,15 +122,15 @@ int main(){
                 }
 
             }
-            else if (checkConstant(ele)){
+            else if (checkConstant(ele)==true){
                 constants.push_back(ele);
             }
             else{
                 for (char c : ele){
-                    if (checkPunctuation(c)){
+                    if (checkPunctuation(c)==true){
                         punctuations.push_back(c);
                     }
-                    else if (checkOperatorNormal(c)){
+                    else if (checkOperatorNormal(c)==true){
                         string op(1, c);
                         operators.push_back(op);
                     }
