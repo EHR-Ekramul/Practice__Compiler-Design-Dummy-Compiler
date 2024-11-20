@@ -6,7 +6,8 @@ This repository showcases a simplified simulation of a **compiler**, written in 
 ---
 
 ## 🛠️ Technologies Used
-- ![C++](https://img.shields.io/badge/-C%2B%2B-00599C?logo=cplusplus&logoColor=white&style=flat)  
+- ![C++](https://img.shields.io/badge/-C%2B%2B-00599C?logo=cplusplus&logoColor=white&style=flat)
+- **IDE**: [Code::Blocks](https://www.codeblocks.org/)
 
 ---
 
